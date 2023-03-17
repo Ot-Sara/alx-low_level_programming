@@ -21,7 +21,7 @@ if (ld > 5)
 }
 else if (n == 0)
 {
-	printf("Last digit of %d is %d and is 0\n", n, ld);
+	printf("Last digit of %d is %d and is zero\n", n, ld);
 }
 else
 {
