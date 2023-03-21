@@ -1,14 +1,16 @@
 #include "main.h"
 
 /**
- * main - Entry point
+ * add - Adds two values
  *
- *Return: the result
+ * @a: The first number to be computed
+ *
+ * @b: The second number to be computed
+ *
+ * Return: Integer value
  */
-int main(void)
-int sum  add_numbers(int a, int b)
+int add(int a, int b)
 {
-	int sum;
-	sum = a + b;
-	return sum;
+
+	return (a + b);
 }
