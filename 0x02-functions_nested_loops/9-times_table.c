@@ -20,8 +20,8 @@ void times_table(void)
 				e = (c - d) / 10;
 				_putchar(44);
 				_putchar(32);
-				_putchar(e + 48);
-				_putchar(d + 48);
+				_putchar(e + '0');
+				_putchar(d + '0');
 			}
 			else if (b != 0)
 			{
@@ -29,7 +29,7 @@ void times_table(void)
 				_putchar(32);
 				_putchar(32);
 			}
-			_putchar(c + 48);
+			_putchar(c + '0');
 		}
 	}
 	_putchar('\n');
