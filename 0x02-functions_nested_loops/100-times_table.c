@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * print_time_table - Prints time table of n
+ * print_times_table - Prints time table of n
  *
  * @n: takes number input
  *
  * Return: No return
  */
 
-void print_time_table(int n)
+void print_times_table(int n)
 {
 	int prod, mult, num;
 
