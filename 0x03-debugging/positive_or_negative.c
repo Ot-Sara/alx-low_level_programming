@@ -1,7 +1,10 @@
 #include "main.h"
 
 /**
- * main - Entry point
+ * positive_or_negative - Prints the positive or negative
+ * number
+ *
+ * @i: The input number
  *
  * Return: Always 0 (Success)
  */
