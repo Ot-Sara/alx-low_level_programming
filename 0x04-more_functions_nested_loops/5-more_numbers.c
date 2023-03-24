@@ -1,24 +1,24 @@
 #include "main.h"
 
 /**
- * print_most_numbers - print 0-9
+ * more_numbers - print 0-14
  * return: void
  */
 
-void print_most_numbers(void)
+void more_numbers(void)
 {
 	int a, b;
 
-	for (a = '0'; a <= '10'; a++)
+	for (a = 0; a < 10; a++)
 	{
-	       for (b = '0'; b <= '14'; b++)
+	       for (b = 0; b <= 14; b++)
 		{
 			if (b >= 10)
 			{
-				_putchar('1');
+				_putchar(j / 10, '0');
 			}
-			_putchar(a%10 + '0');
+			_putchar(j % 10 + '0');
 		}
-        }
-        _putchar('\n');
+	}
+	_putchar('\n');
 }
