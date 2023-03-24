@@ -1,6 +1,7 @@
 #include "main.h"
 
-/** int _isupper - Prints the uppercase character
+/**
+ * _isupper - Prints the uppercase character
  *
  * @c: the input character
  *
