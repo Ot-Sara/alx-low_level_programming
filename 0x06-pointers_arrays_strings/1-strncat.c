@@ -5,6 +5,7 @@
  *
  * @dest: the first string
  * @src: the second string
+ * @n: most number of bytes src
  *
  * Return: a pointer to the resulting string
  * dest
