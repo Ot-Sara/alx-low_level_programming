@@ -6,6 +6,8 @@
  * *string_toupper - changes all lowercase letters
  * of a string to uppercase
  *
+ * @str: the string to return
+ *
  * Return: the string
  */
 
