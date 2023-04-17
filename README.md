@@ -1,1 +1,1 @@
-My first readme
+0x0E. C - Structures, typedef
