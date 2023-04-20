@@ -12,8 +12,8 @@
 
 int main(int argc, char  *argv[])
 {
-	int i, num_bytes;
-	char *arr;
+	int num_bytes;
+	char *p = (char *)main;
 
 	if (argc != 2)
 	{
@@ -27,18 +27,10 @@ int main(int argc, char  *argv[])
 		printf("Error\n");
 		exit(2);
 	}
-	arr = (char *)main;
-
-	for (i = 0; i < num_bytes; i++)
+	while (num_bytes--)
 	{
-		if (i == num_bytes - 1)
-		{
-			printf("%02hhx ", arr[i]);
-			break;
-		}
-		printf("%02hhx ", arr[i]);
+		printf("%02hhx%s", *p++, num_bytes ? " " : "\n");
 	}
-	printf("\n");
 	return (0);
 }
 
