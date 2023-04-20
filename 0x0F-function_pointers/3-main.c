@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "function_pointers.h"
 #include "3-calc.h"
 
 /**
  * main - prints the number of arguments passed into it
- * @num1: number of arguments
- * @num2: array of arguments
+ * @argc: number of arguments
+ * @argv: array of arguments
  * Return: Always 0 (Success)
  */
 int main(int __attribute__((__unused__))argc, char *argv[])
