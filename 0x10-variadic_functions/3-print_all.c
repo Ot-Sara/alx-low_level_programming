@@ -32,7 +32,7 @@ void format_int(char *separator, va_list args)
 
 void format_float(char *separator, va_list args)
 {
-	printf("%s%d", separator, va_arg(args, int));
+	printf("%s%f", separator, va_arg(args, double));
 }
 
 /**
