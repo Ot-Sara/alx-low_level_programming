@@ -19,7 +19,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	file_descriptor = open(filename, O_RDONLY);
-	if (file_descriptor == -1) {
+	if (file_descriptor == -1)
+	{
 		perror("open");
 		return (0); }
 
