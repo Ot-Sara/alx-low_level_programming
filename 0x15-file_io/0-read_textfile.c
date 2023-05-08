@@ -37,6 +37,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 			return (0);
 		bytes_read += n;
 		bytes_written += m; }
-	if (close(file_descriptor == -1))
+	if (close(file_descriptor) == -1 || write(STDOUT_FILENO, buffer, bytes_read)
+			!= (ssize_t) bytes_read)
 		return (0);
 	return (bytes_written); }
