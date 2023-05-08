@@ -38,8 +38,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		bytes_read += n;
 		bytes_written += m; }
 	if (write(STDOUT_FILENO, buffer, bytes_read) !=
-			(ssize_t)bytes_read)
-	{
-		close(file_descriptor);
-		return (0); }
+			(ssize_t)bytes_read || close(file_descriptor == -1))
+		return (0);
 	return (bytes_written); }
