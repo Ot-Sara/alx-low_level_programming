@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 		bytes_written = write(fd_to, buffer, bytes_read);
 		if (bytes_written != bytes_read)
 		{ dprintf(STDERR_FILENO, "Error: Can't write to %s\n",
-					argv[1]);
+					argv[2]);
 			exit(99);
 			break; }
 	}
