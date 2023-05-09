@@ -21,7 +21,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	file_descriptor = open(filename, O_RDONLY);
 	if (file_descriptor == -1)
 	{
-		perror("open" | "read");
+		perror("open");
 		return (0); }
 
 	while (bytes_read < letters)
