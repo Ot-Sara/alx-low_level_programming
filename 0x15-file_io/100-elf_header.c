@@ -13,7 +13,7 @@ void printf_elf_header_info(Elf64_Ehdr *header)
 	for (i = 0; i < EI_NIDENT; i++)
 		printf("%02x ", header->e_ident[i]);
 	printf("\n");
-	printf ("  Class:                                    ");
+	printf ("  Class:				");
 	switch (header->e_ident[EI_CLASS])
 	{
 		case ELFCLASSNONE:
@@ -29,7 +29,7 @@ void printf_elf_header_info(Elf64_Ehdr *header)
 			printf("<unknown: %x>\n", header->e_ident
 					[EI_CLASS]);
 	}
-	printf("  Data:                                      ");
+	printf("  Data:					");
 	switch (header->e_ident[EI_DATA])
 	{
 		case ELFDATANONE:
@@ -45,6 +45,6 @@ void printf_elf_header_info(Elf64_Ehdr *header)
 			printf("<unknown: %x\n", header->e_ident
 					[EI_DATA]);
 	}
-	printf("  Version:                                    %d\n",
+	printf("  Version:				%d\n",
 			header->e_ident[EI_VERSION]);
-	printf("  OS/ABI:                                     ");
+	printf("  OS/ABI:				");
