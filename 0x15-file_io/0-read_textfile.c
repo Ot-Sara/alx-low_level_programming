@@ -17,14 +17,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (filename == NULL)
 	{
-		write(2, "Error: filename is NULL\n", 24);
-		return (0); }
+		errno = EINVAL;
+		return (-1); }
 
 	file_descriptor = open(filename, O_RDONLY);
 	if (file_descriptor == -1)
-	{
-		perror("open");
-		return (0); }
+		return (-1);
 
 	while (bytes_read < letters)
 	{
@@ -36,9 +34,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 			break;
 		m = write(STDOUT_FILENO, buffer, n);
 		if (m != n)
-			return (0);
+		{
+			close(file_descriptor);
+			return (-1); }
 		bytes_read += n;
 		bytes_written += m; }
+	if (bytes_read < letters && errno != 0)
+	{
+		close(file_descriptor);
+		return (-1); }
 	if (close(file_descriptor) == -1)
-		return (0);
+		return (-1);
 	return (bytes_written); }
