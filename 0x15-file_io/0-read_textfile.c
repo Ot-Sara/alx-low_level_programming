@@ -12,13 +12,8 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int file_descriptor;
-	size_t bytes_read = 0, bytes_to_read, n, m;
+	ssize_t bytes_read = 0, bytes_to_read, n, m;
 	char buffer[1024];
-
-	if (filename == NULL)
-	{
-		errno = EINVAL;
-		return (-1); }
 
 	file_descriptor = open(filename, O_RDONLY);
 	if (file_descriptor == -1)
@@ -26,17 +21,21 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	while (bytes_read < letters)
 	{
-		bytes_to_read = letters - bytes_read;
+		(size_t) bytes_to_read = letters - bytes_read;
 		if (bytes_to_read > sizeof(buffer))
 			bytes_to_read = sizeof(buffer);
+
 		n = read(file_descriptor, buffer, bytes_to_read);
 		if (n == -1)
 			return (0);
+
 		if (n == 0)
 			break;
+
 		m = write(STDOUT_FILENO, buffer, n);
 		if (m == -1)
 			return (0);
+
 		bytes_read += n;
 	}
 	close(file_descriptor);
